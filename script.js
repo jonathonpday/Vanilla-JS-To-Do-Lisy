@@ -16,7 +16,25 @@ myBtn.addEventListener('click', (e) => {
 function addNewUser(userName) {
   const li = createMyElement(myList, 'li', 'myList');
   const div = createMyElement(li, 'div', 'container');
-  div.textContent = userName;
+  const span1 = createMyElement(div, 'span', 'info');
+  span1.textContent = userName;
+  const span2 = createMyElement(div, 'span', 'editor');
+  span2.textContent = 'Edit';
+  const span3 = createMyElement(div, 'span', 'del');
+  span3.textContent = 'Delete'
+
+  span2.addEventListener('click', (e) => {
+    console.log('edit')
+  })
+
+  span3.addEventListener('click', (e) => {
+    console.log('delete')
+  })
+
+
+
+
+
   return li;
 }
 
